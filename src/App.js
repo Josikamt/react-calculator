@@ -3,6 +3,8 @@ import  DigitButton from "./DigitButton";
 import OperationButton from "./OperationButton";
 import "./styles.css"
 
+
+
 export const ACTIONS = {
   ADD_DIGIT : "add-digit",
   CLEAR : "clear",
@@ -139,11 +141,13 @@ function formatOperand(operand){
 function App() {
   const[{previousOperand , currentOperand , operation} , dispatch] = useReducer(
     reducer,
+    
     {}
     )
 
 
   return (
+   
     <div className="calculator-grid">
       <div className="output">
         <div className="previous-operand">{formatOperand(previousOperand)} {operation}</div>
